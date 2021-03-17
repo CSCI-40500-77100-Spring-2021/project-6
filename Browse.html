@@ -10,9 +10,9 @@
 		<title>Browse - Maven</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="Browse.css">
 	</head>
 	<body class="is-preload">
@@ -57,60 +57,75 @@
 									</div>
 								</header>
 
-								<!-- Multiple Item Carousel -->
-								<div id="demo" class="carousel slide item-center" data-interval="false" >
-									
-									<!-- The slideshow -->
-									<div class="container carousel-inner no-padding image-size">
+								<h2 style="text-transform: none; text-align: center;">Browse by Subject</h2>
+
+								<div class="Carousel-Spacing">
+									<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+										<div class="carousel-inner Caption-Styles Image-Styles">
 										<div class="carousel-item active">
-											<div class="col-xs-3 col-sm-3 col-md-3">
-												<div class="icon-container">
-													<img src="./images/icons/paint-palette.png">
-													<p>Art</p>
-												</div>
-											</div>    
-											<div class="col-xs-3 col-sm-3 col-md-3">
-												<div class="icon-container">
-													<img src="./images/icons/chemistry.png">
-													<p>Science</p>
-												</div>
-											</div>   
-											<div class="col-xs-3 col-sm-3 col-md-3">
-												<div class="icon-container">
-													<img src="./images/icons/history.png">
-													<p>History</p>
-												</div>
+											<img src="images/BrowseBanners/art.jpg" class="d-block w-100" alt="art">
+											<div class="carousel-caption d-none d-md-block">
+												<h5>Art</h5>
 											</div>
 										</div>
 										<div class="carousel-item">
-											<div class="col-xs-3 col-sm-3 col-md-3">
-												<div class="icon-container">
-													<img src="./images/icons/education.png">
-													<p>Textbooks</p>
-												</div>
-											</div>    
-											<div class="col-xs-3 col-sm-3 col-md-3">
-												<div class="icon-container">
-													<img src="./images/icons/pill.png">
-													<p>Medicine</p>
-												</div>
-											</div>   
-											<div class="col-xs-3 col-sm-3 col-md-3">
-												<div class="icon-container">
-													<img src="./images/icons/rose.png">
-													<p>Romance</p>
-												</div>
+											<img src="images/BrowseBanners/finance.jpg" class="d-block w-100" alt="finance">
+											<div class="carousel-caption d-none d-md-block">
+												<h5>Finance</h5>
 											</div>
 										</div>
+										<div class="carousel-item">
+											<img src="images/BrowseBanners/architecture.jpg" class="d-block w-100" alt="architecture">
+											<div class="carousel-caption d-none d-md-block">
+												<h5>Architecture</h5>
+											</div>
+										</div>
+										<div class="carousel-item">
+											<img src="images/BrowseBanners/engineering.jpg" class="d-block w-100" alt="engineering">
+											<div class="carousel-caption d-none d-md-block">
+												<h5>Engineering</h5>
+											</div>
+										</div>
+										<div class="carousel-item">
+											<img src="images/BrowseBanners/law.jpg" class="d-block w-100" alt="law">
+											<div class="carousel-caption d-none d-md-block">
+												<h5>Law</h5>
+											</div>
+										</div>
+										<div class="carousel-item">
+											<img src="images/BrowseBanners/medicine.jpg" class="d-block w-100" alt="medicine">
+											<div class="carousel-caption d-none d-md-block">
+												<h5>Medicine</h5>
+											</div>
+										</div>
+										<div class="carousel-item">
+											<img src="images/BrowseBanners/compsci.jpg" class="d-block w-100" alt="compsci">
+											<div class="carousel-caption d-none d-md-block">
+												<h5>Computer Science</h5>
+											</div>
+										</div>
+										<div class="carousel-item">
+											<img src="images/BrowseBanners/psychology.jpg" class="d-block w-100" alt="psychology">
+											<div class="carousel-caption d-none d-md-block">
+												<h5>Psychology</h5>
+											</div>
+										</div>
+										<div class="carousel-item">
+											<img src="images/BrowseBanners/math.jpg" class="d-block w-100" alt="math">
+											<div class="carousel-caption d-none d-md-block">
+												<h5>Mathematics</h5>
+											</div>
+										</div>
+										</div>
+										<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+										<span class="visually-hidden">Previous</span>
+										</button>
+										<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+										<span class="carousel-control-next-icon" aria-hidden="true"></span>
+										<span class="visually-hidden">Next</span>
+										</button>
 									</div>
-									
-									<!-- Left and right controls -->
-									<a class="carousel-control-prev" href="#demo" data-slide="prev">
-										<span class="carousel-control-prev-icon"></span>
-									</a>
-									<a class="carousel-control-next" href="#demo" data-slide="next">
-										<span class="carousel-control-next-icon"></span>
-									</a>
 								</div>
 
 								
@@ -159,7 +174,7 @@
 			<script src="assets/js/main.js"></script>
 
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>      
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
 	</body>
 </html>
