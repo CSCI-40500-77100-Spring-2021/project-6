@@ -12,6 +12,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="Browse.css">
 	</head>
 	<body class="is-preload">
@@ -43,15 +44,91 @@
 
 				<!-- Main -->
 					<article id="main">
-						<header>
-							<h2>Browse</h2>
-							<div class="main">
-								<input type="text" name="Search" placeholder="Search...">
-								<button>SEARCH</button>
-							</div>
-						</header>
+
 						<section class="wrapper style5">
 							<div class="inner">
+								<h2 style="color: black; text-align: center;">Browse</h2>
+								
+								<!-- Search Button -->
+								<header class="browse-header">
+									<div class="main">
+										<input type="text" name="Search" placeholder="Search...">
+										<button>SEARCH</button>
+									</div>
+								</header>
+
+								<!-- Multiple Item Carousel -->
+								<div id="demo" class="carousel slide" data-interval="false">
+
+									<!-- Indicators -->
+									<ul class="carousel-indicators">
+										<li data-target="#demo" data-slide-to="0" class="active"></li>
+										<li data-target="#demo" data-slide-to="1"></li>
+										<li data-target="#demo" data-slide-to="2"></li>
+									</ul>
+									
+									<!-- The slideshow -->
+									<div class="container carousel-inner no-padding image-size">
+										<div class="carousel-item active">
+											<div class="col-xs-3 col-sm-3 col-md-3">
+												<div>
+													<img src="./images/icons/paint-palette.png">
+													<p>Art</p>
+												</div>
+											</div>    
+											<div class="col-xs-3 col-sm-3 col-md-3">
+												<div>
+													<img src="./images/icons/chemistry.png">
+													<p>Science</p>
+												</div>
+											</div>   
+											<div class="col-xs-3 col-sm-3 col-md-3">
+												<div>
+													<img src="./images/icons/history.png">
+													<p>History</p>
+												</div>
+											</div>   
+										</div>
+										<div class="carousel-item">
+											<div class="col-xs-3 col-sm-3 col-md-3">
+												<img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+											</div>    
+											<div class="col-xs-3 col-sm-3 col-md-3">
+												<img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+											</div>   
+											<div class="col-xs-3 col-sm-3 col-md-3">
+												<img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+											</div>   
+											<div class="col-xs-3 col-sm-3 col-md-3">
+												<img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+											</div>  
+										</div>
+										<div class="carousel-item">
+											<div class="col-xs-3 col-sm-3 col-md-3">
+												<img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+											</div>    
+											<div class="col-xs-3 col-sm-3 col-md-3">
+												<img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+											</div>   
+											<div class="col-xs-3 col-sm-3 col-md-3">
+												<img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+											</div>   
+											<div class="col-xs-3 col-sm-3 col-md-3">
+												<img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+											</div>  
+										</div>
+									</div>
+									
+									<!-- Left and right controls -->
+									<a class="carousel-control-prev" href="#demo" data-slide="prev">
+										<span class="carousel-control-prev-icon"></span>
+									</a>
+									<a class="carousel-control-next" href="#demo" data-slide="next">
+										<span class="carousel-control-next-icon"></span>
+									</a>
+								</div>
+
+								
 
 								<section>
 									<div class="box alt">
@@ -70,6 +147,8 @@
 								</section>
 
 							</div>
+
+
 						</section>
 					</article>
 
@@ -93,6 +172,9 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>      
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 	</body>
 </html>
