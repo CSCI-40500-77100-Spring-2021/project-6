@@ -86,4 +86,10 @@ body .no-padding {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.item-center {
+  display: flex;
+  justify-content: center;
 }
