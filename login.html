@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <meta name="google-signin-client_id" content="107577167980-4voh0ckavrhmb8g5c8m7sv3rokaua4s2.apps.googleusercontent.com">
 <link rel="stylesheet" href="login.css">
 <head>
@@ -13,16 +14,16 @@
     <header></header>
     <div class="box">
         <form>
-            <span class="text-center">login</span>
+            <span class="text-center">Login</span>
         <div class="input-container">
-            <input type="text" required=""/>
+            <input id="password" type="text" required=""/>
             <label>Username</label>		
         </div>
         <div class="input-container">		
-            <input type="password" required=""/>
+            <input id="password" type="password" required=""/>
             <label>Password</label>
         </div>
-        <a href="#" id="signup">Don't have an account? Sign up!</a>
+        <a href="register.html" id="signup">Don't have an account? Sign up!</a>
         <br>
         <button type="button" class="btn">submit</button>
     </form>	
