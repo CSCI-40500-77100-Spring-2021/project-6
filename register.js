@@ -1,14 +1,17 @@
 function registerUser(){
-    let username = document.getElementById("username");
-    let password = document.getElementById("password");
-    let userform = new FormData();
-    userform.append("username", username);
-    userform.append("password", password);
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    let data = {
+        username: username,
+        password: password
+    }
 
     $.ajax({
-        url: "http://localhost:8000",
-        data: userform,
-        type: "POST"
+        url: "http://localhost:8000/users",
+        data: data,
+        type: "POST",
+        headers: { "Content-Type": "multipart/form-data" },
     })
     window.location.replace("login.html")
 }
