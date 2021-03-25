@@ -15,4 +15,7 @@ def createUser(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
         User.objects.create(username=username,password=password)
-
+        
+    all_objects = list(User.objects.all())
+    ao_json = serializers.serialize('json', all_objects)
+    return HttpResponse(ao_json, content_type='application/json')
