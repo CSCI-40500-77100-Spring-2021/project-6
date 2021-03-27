@@ -11,6 +11,8 @@ Maven is a decentralized library where people can come to search up textbooks to
 
 ## Architectural Decisions
 
+![image](./Layered_Architecture_Model.png)
+
 ### Important Qualities
 For our software product, an important quality is the nonfunctional product characteristics (such as security and performance), since we will be dealing with sensitive information like personal user information and CC’s. Product lifetime is also important since we want to maintain the site and rental services of books for a long time. Finally, consideration of number of users is important, as we want to be able to handle the fluctuating load of users that are visiting and making transactions on the site.
 
