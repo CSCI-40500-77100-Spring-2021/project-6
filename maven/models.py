@@ -10,6 +10,7 @@ class Books(models.Model):
     ISBN = models.CharField(blank=True,max_length=255)
     title = models.CharField(blank=True,max_length=255)
     author = models.CharField(blank=True,max_length=255)
+    genre = models.CharField(blank=True,max_length=255)
     description = models.CharField(blank=True,max_length=255)
 
 def __str__(self):
