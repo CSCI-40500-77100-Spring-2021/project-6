@@ -23,7 +23,6 @@ $.ajax({
   url: "http://localhost:8000/books",
   data: data,
   type: "POST",
-  headers: { "Content-Type": "multipart/form-data" },
 })
 ```
 ### /users
@@ -38,7 +37,6 @@ $.ajax({
   url: "http://localhost:8000/users",
   data: data,
   type: "POST",
-  headers: { "Content-Type": "multipart/form-data" },
 })
 ```
 The key names for the POST request must be exact since those names are what the backend is looking for in each request
