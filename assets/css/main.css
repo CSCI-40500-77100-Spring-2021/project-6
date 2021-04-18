@@ -3998,3 +3998,9 @@ input, select, textarea {
 		background-color: #1d242a;
 	}
 
+
+
+/* Custom Styles */
+.button-shrink {
+	width: 17%;
+}
