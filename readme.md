@@ -8,6 +8,13 @@
 7. Next, run the command `python manage.py migrate` 
 8. Go back to the original terminal you had open and use Ctrl-C to stop it and then run the `docker-compose up` command again and that error should be gone.
 ## Endpoints
+If you would like to make a simple GET request to the database to view its contents, you can do it through jquery. An example:
+```javascript
+  $.getJSON("http://localhost:8000/users", function(data){  //You can swap users for books and get the output of books in the database
+    console.log(data);
+  }
+```
+Remember that the output of the above command will be empty if you don't try registering a user or adding a book first. The contents of the database are local to your machine since its not running on a server but through Docker instead.
 ### /books
 Contains all the books in the database. An example of sending a book to the database:
 ```javascript
@@ -29,8 +36,8 @@ $.ajax({
 Contains all the users in the database. An example of sending a new user to the database:
 ```javascript
 let data = {
-  username: username,
-  password: password
+  username: "deondre",
+  password: "pogreopkerg"
 }
 
 $.ajax({
