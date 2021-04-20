@@ -7,7 +7,7 @@
 <html>
     <head>
     <link rel="icon" href="images/BookFavicon.png"/>
-        <title>Contact Us - Maven</title>
+        <title>Add a Book - Maven</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
@@ -44,46 +44,34 @@
                 <!-- Main -->
                     <article id="main">
                         <header>
-                            <h2>Contact Us</h2>
+                            <h2>Add a Book</h2>
                         </header>
                         <section class="wrapper style5">
                             <div class="inner">
-                                <p>Have questions? Send us a message below.</p>
+                                <p>Have a book you want to rent or sell? Add it to our collection here.</p>
             
                                 <section>
-                                    <h4>Form</h4>
+                                    <h4>Book Information</h4>
                                     <form method="post" action="#">
                                         <div class="row gtr-uniform">
                                             <div class="col-6 col-12-xsmall">
-                                                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+                                                <input type="text" name="isbn" id="isbn" value="" placeholder="ISBN" />
                                             </div>
                                             <div class="col-6 col-12-xsmall">
-                                                <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+                                                <input type="text" name="title" id="title" value="" placeholder="Title" />
+                                            </div>
+                                            <div class="col-6 col-12-xsmall">
+                                                <input type="text" name="author" id="author" value="" placeholder="Author" />
+                                            </div>
+                                            <div class="col-6 col-12-xsmall">
+                                                <input type="text" name="genre" id="genre" value="" placeholder="Genre" />
                                             </div>
                                             <div class="col-12">
-                                                <select name="demo-category" id="demo-category">
-                                                    <option value="">- What's it about? -</option>
-                                                    <option value="billing">Billing</option>
-                                                    <option value="shipping">Shipping</option>
-                                                    <option value="administrative">Administrative</option>
-                                                    <option value="suggestions">Suggestions</option>
-                                                    <option value="partnering">Partnering</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-6 col-12-small">
-                                                <input type="checkbox" id="demo-copy" name="demo-copy">
-                                                <label for="demo-copy">Email me a copy</label>
-                                            </div>
-                                            <div class="col-6 col-12-small">
-                                                <input type="checkbox" id="demo-human" name="demo-human">
-                                                <label for="demo-human">Not a robot</label>
-                                            </div>
-                                            <div class="col-12">
-                                                <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                                                <textarea name="description" id="description" placeholder="Description of book" rows="6"></textarea>
                                             </div>
                                             <div class="col-12">
                                                 <ul class="actions">
-                                                    <li><input type="submit" value="Send Message" class="primary" /></li>
+                                                    <li><input type="submit" value="Add book" class="primary" /></li>
                                                     <li><input type="reset" value="Reset" /></li>
                                                 </ul>
                                             </div>
