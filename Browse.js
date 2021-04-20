@@ -1,6 +1,6 @@
 if (localStorage.getItem('username') !== null) {
     // display username
-    document.getElementById('login-success').innerHTML = "Welcome, " + localStorage.getItem('username');
+    document.getElementById('login-success').innerHTML = "Welcome, " + localStorage.getItem('username') + "  ";
 
     // create sign out button
     let signOutButton = document.createElement("button");
