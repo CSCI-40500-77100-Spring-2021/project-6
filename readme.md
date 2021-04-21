@@ -19,6 +19,7 @@ Remember that the output of the above command will be empty if you don't try reg
 Contains all the books in the database. An example of sending a book to the database:
 ```javascript
 let data = {
+  owner_id = "ff9534aa-4925-49df-9f6d-89f55e9ae69c"
   ISBN: "9781524721251"
   title: "Harry Potter and the Sorcerer's Stone"
   author: "J.K. Rowling"
