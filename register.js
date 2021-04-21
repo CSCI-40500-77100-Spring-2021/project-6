@@ -11,7 +11,6 @@ function registerUser(){
         url: "http://localhost:8000/users",
         data: data,
         type: "POST",
-        headers: { "Content-Type": "multipart/form-data" },
     })
     window.location.replace("login.html")
 }
