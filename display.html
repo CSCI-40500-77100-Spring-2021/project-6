@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- <link rel="stylesheet" href="login.css"> -->
+<script src="display.js"></script>
+<h2>DISPLAYYY</h2>
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+</style>
+<body>
+      <p>
+          Click on the button to fetch employee data
+      </p>
+           
+      <div id = "display" style = "background-color:#39B54A;"></div>
+           
+      <input type = "button" id = "fetch" value = "Fetch Employee Data" />
+        
+   </body>
+
+
+<table id="bookss">
+	<thead>
+		<th>ISBN</th>
+		<th>Title</th>
+		<th>Author</th>
+		<th>Genre</th>
+		<th>Description</th>
+	</thead>
+	<tbody id="bookssbody"></tbody>
+</table>
