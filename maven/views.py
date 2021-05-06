@@ -41,3 +41,7 @@ def deleteBook(request):
         owner_id = request.POST.get('owner_id')
         ISBN = request.POST.get('ISBN')
         Books.objects.filter(owner_id, ISBN).delete()
+    
+    all_objects = list(Books.objects.all())
+    ao_json = serializers.serialize('json', all_objects)
+    return HttpResponse(ao_json, content_type='application/json')
