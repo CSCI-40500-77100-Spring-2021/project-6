@@ -20,13 +20,18 @@ $(document).ready(function() {
         // });
 
         for (i = 0; i < data.length; i++) {
-            console.log(data[i].fields.title);
+            let buyButton = document.createElement("a");
+            buyButton.innerHTML = "Add to Cart";
+            buyButton.href = "#"
+            buyButton.className = "button primary";
+
             $('#books-list').append($("<tr>")
                 .append($("<td>").append(data[i].fields.ISBN))
                 .append($("<td>").append(data[i].fields.title))
                 .append($("<td>").append(data[i].fields.author))
                 .append($("<td>").append(data[i].fields.genre))
-                .append($("<td>").append(data[i].fields.description)));
+                .append($("<td>").append(data[i].fields.description))
+                .append($("<td>").append(data[i].fields.price).append(buyButton)));
         };
 
     });
