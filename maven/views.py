@@ -23,7 +23,7 @@ def createUser(request):
 def createBook(request):
     if request.method == "POST":
         print(request.POST)
-        owner_id = request.POST.get("owner_id")
+        owner_id = request.POST.get('owner_id')
         ISBN = request.POST.get('ISBN')
         title = request.POST.get('title')
         author = request.POST.get('author')
