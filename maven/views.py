@@ -3,6 +3,7 @@ from .models import Books, User
 from django.core import serializers
 from django.http import HttpResponse
 from maven.models import User
+import uuid
 # Create your views here.
 def index(request):
     all_objects = list(User.objects.all())
@@ -11,16 +12,15 @@ def index(request):
 
 def createUser(request):
     if request.method == "POST":
-        print(request.POST)
         username = request.POST.get('username')
         password = request.POST.get('password')
-        User.objects.create(username=username,password=password)
+        User.objects.create(ID=uuid.uuid4(),username=username,password=password)
         
     all_objects = list(User.objects.all())
     ao_json = serializers.serialize('json', all_objects)
     return HttpResponse(ao_json, content_type='application/json')
 
-def CreateBook(request):
+def createBook(request):
     if request.method == "POST":
         print(request.POST)
         owner_id = request.POST.get('owner_id')
