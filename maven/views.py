@@ -23,12 +23,13 @@ def createUser(request):
 def CreateBook(request):
     if request.method == "POST":
         print(request.POST)
+        owner_id = request.POST.get('owner_id')
         ISBN = request.POST.get('ISBN')
         title = request.POST.get('title')
         author = request.POST.get('author')
         genre = request.POST.get('genre')
         description = request.POST.get('description')
-        Books.objects.create(ISBN=ISBN,title=title,author=author,genre=genre,description=description)
+        Books.objects.create(owner_ID=owner_id,ISBN=ISBN,title=title,author=author,genre=genre,description=description)
 
     all_objects = list(Books.objects.all())
     ao_json = serializers.serialize('json', all_objects)

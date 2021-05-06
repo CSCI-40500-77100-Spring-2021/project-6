@@ -52,7 +52,7 @@
             
                                 <section>
                                     <h4>Book Information</h4>
-                                    <form method="post" action="#">
+                                    <form method="post" action="add-books.html">
                                         <div class="row gtr-uniform">
                                             <div class="col-6 col-12-xsmall">
                                                 <input type="text" name="isbn" id="isbn" value="" placeholder="ISBN" />
@@ -70,8 +70,11 @@
                                                 <textarea name="description" id="description" placeholder="Description of book" rows="6"></textarea>
                                             </div>
                                             <div class="col-12">
+                                                <input type="text" name="price" id="price" value="" placeholder="Price" />
+                                            </div>
+                                            <div class="col-12">
                                                 <ul class="actions">
-                                                    <li><input type="submit" value="Add book" class="primary" /></li>
+                                                    <li><button type="submit" value="Add book" class="primary" onclick="addBook()">Add Book</button></li>
                                                     <li><input type="reset" value="Reset" /></li>
                                                 </ul>
                                             </div>
@@ -104,6 +107,7 @@
             <script src="assets/js/breakpoints.min.js"></script>
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
+            <script src="add-books.js"></script>
 
     </body>
 </html>
