@@ -1,5 +1,5 @@
 from django.db import models
-from django.db.models.fields import EmailField
+from django.db.models.fields import EmailField, FloatField
 
 # Create your models here.
 class User(models.Model):
@@ -14,6 +14,7 @@ class Books(models.Model):
     author = models.CharField(blank=True,max_length=255)
     genre = models.CharField(blank=True,max_length=255)
     description = models.CharField(blank=True,max_length=5000)
+    price = FloatField(default=0,blank=True)
 
 def __str__(self):
     return self.name
