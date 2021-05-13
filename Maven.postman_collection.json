@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "ba30b8a6-0411-4c5f-a7e2-eb495adc61c3",
+		"name": "Maven",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "View all users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							"pm.test(\"Content-Type header is application/json\", () => {",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", () => {",
+							"  pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"Test data types of the response\", function () {",
+							"    var jsonData = pm.response.json()[0];",
+							"    console.log(jsonData);",
+							"    pm.expect(jsonData).to.be.an(\"object\");",
+							"    pm.expect(jsonData.pk).to.be.a(\"string\");",
+							"    pm.expect(jsonData.model).to.eql(\"maven.user\");",
+							"    pm.expect(jsonData.fields).to.have.all.keys(\"username\", \"password\");",
+							"    pm.expect(jsonData.fields.username).to.be.a(\"string\");",
+							"    pm.expect(jsonData.fields.password).to.be.a(\"string\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View all books",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							"pm.test(\"Content-Type header is application/json\", () => {",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", () => {",
+							"  pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"Test data types of the response\", function () {",
+							"    var jsonData = pm.response.json()[0];",
+							"    console.log(jsonData);",
+							"    pm.expect(jsonData).to.be.an(\"object\");",
+							"    pm.expect(jsonData.pk).to.be.a(\"number\");",
+							"    pm.expect(jsonData.model).to.eql(\"maven.books\");",
+							"    pm.expect(jsonData.fields.owner_ID).to.be.a(\"string\");",
+							"    pm.expect(jsonData.fields.ISBN).to.be.a(\"string\");",
+							"    pm.expect(jsonData.fields.title).to.be.a(\"string\");",
+							"    pm.expect(jsonData.fields.author).to.be.a(\"string\");",
+							"    pm.expect(jsonData.fields.genre).to.be.a(\"string\");",
+							"    pm.expect(jsonData.fields.description).to.be.a(\"string\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
