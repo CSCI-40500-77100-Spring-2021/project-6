@@ -1,4 +1,3 @@
-from _typeshed import OpenBinaryModeWriting
 from django.shortcuts import render
 from .models import Books, User
 from django.core import serializers
