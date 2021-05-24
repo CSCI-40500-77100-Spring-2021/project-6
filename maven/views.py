@@ -22,7 +22,6 @@ def createUser(request):
 
 def createBook(request):
     if request.method == "POST":
-        print(request.POST)
         owner_id = request.POST.get("owner_id")
         ISBN = request.POST.get('ISBN')
         title = request.POST.get('title')
@@ -32,6 +31,16 @@ def createBook(request):
         price = request.POST.get('price')
         Books.objects.create(owner_ID=owner_id,ISBN=ISBN,title=title,author=author,genre=genre,description=description,price=price)
 
+    all_objects = list(Books.objects.all())
+    ao_json = serializers.serialize('json', all_objects)
+    return HttpResponse(ao_json, content_type='application/json')
+
+def deleteBook(request):
+    if request.method == "POST":
+        owner_id = request.POST.get('owner_id')
+        ISBN = request.POST.get('ISBN')
+        Books.objects.filter(owner_id, ISBN).delete()
+    
     all_objects = list(Books.objects.all())
     ao_json = serializers.serialize('json', all_objects)
     return HttpResponse(ao_json, content_type='application/json')
