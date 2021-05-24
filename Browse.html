@@ -16,6 +16,18 @@
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         <link rel="stylesheet" type="text/css" href="Browse.css">
+		<link rel="stylesheet" type="text/css" href="Browse_table.css">
+		<script src="display.js"></script>
+		<script>
+		$(document).ready(function(){
+		  $("#myInput").on("keyup", function() {
+		    var value = $(this).val().toLowerCase();
+		    $("#bookssbody tr").filter(function() {
+		      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		    });
+		  });
+		});
+		</script>
     </head>
     <body class="is-preload">
         <!-- Page Wrapper -->
@@ -54,12 +66,12 @@
                                 <h2 style="color: black; text-align: center;">Browse</h2>
                                 
                                 <!-- Search Button -->
-                                <header class="browse-header">
+                                <!-- <header class="browse-header">
                                     <div class="main">
                                         <input type="text" name="Search" placeholder="Search...">
                                         <button>SEARCH</button>
                                     </div>
-                                </header>
+                                </header> -->
 
                                 <h2 style="text-transform: none; text-align: center;">Browse by Subject</h2>
 
@@ -134,7 +146,30 @@
 
                                 
                                 <section>
-                                    <h2>Available Books for Rent</h2>
+	                                <div class="browse-header">
+	                                    <div class="main">
+	                                        <input id="myInput" type="text" name="Search" placeholder="Search...">
+	                                        <button>SEARCH</button>
+	                                    </div>
+	                                </div>
+									
+									
+									
+									<table id="bookss">
+										<thead>
+											<th>ISBN</th>
+											<th>Title</th>
+											<th>Author</th>
+											<th>Genre</th>
+											<th>Description</th>
+										</thead>
+										<tbody id="bookssbody"></tbody>
+									</table>
+									
+									
+									
+									
+                                    <!-- <h2>Available Books for Rent</h2>
                                     <div class="table-wrapper">
                                         <table class="alt" style="width: 100%">
                                             <colgroup>
@@ -166,7 +201,7 @@
                                                     <td>
                                                         39.99
                                                         <a href="#" class="button primary">Add to Cart</a>
-                                                    </td>		
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>101</td>
@@ -256,15 +291,15 @@
                                                         <a href="#" class="button primary">Add to Cart</a>
                                                     </td>
                                                 </tr>
-                                            </tbody>
+                                            </tbody> -->
                                             <!-- <tfoot>
                                                 <tr>
                                                     <td colspan="2"></td>
                                                     <td>100.00</td>
                                                 </tr>
                                             </tfoot> -->
-                                        </table>
-                                    </div>
+                                        <!-- </table>
+                                    </div> -->
                                 </section>
                                 <!-- <section>
                                     <div class="box alt">
