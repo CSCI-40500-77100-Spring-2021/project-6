@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class AnimeRecommenderConfig(AppConfig):
+class MavenConfig(AppConfig):
     name = 'maven'
