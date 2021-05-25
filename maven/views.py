@@ -20,6 +20,26 @@ def createUser(request):
     ao_json = serializers.serialize('json', all_objects)
     return HttpResponse(ao_json, content_type='application/json')
 
+def editUser(request):
+    if request.method == "POST":
+        username = request.POST.get('username')
+        user = User.objects.filter(username=username)
+        user.username = username
+        user.save()
+
+    all_objects = list(User.objects.all())
+    ao_json = serializers.serialize('json', all_objects)
+    return HttpResponse(ao_json, content_type='application/json')
+
+def deleteUser(request):
+    if request.method == "DELETE":
+        username = request.DELETE.get('username')
+        User.objects.filter(username=username).delete()
+        
+    all_objects = list(User.objects.all())
+    ao_json = serializers.serialize('json', all_objects)
+    return HttpResponse(ao_json, content_type='application/json')
+
 def createBook(request):
     if request.method == "POST":
         owner_id = request.POST.get("owner_id")
