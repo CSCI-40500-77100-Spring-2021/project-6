@@ -1,4 +1,4 @@
-[![YourActionName Actions Status](https://github.com/CSCI-40500-77100-Spring-2021/project-6/workflows/Django-CI/badge.svg)](https://github.com/CSCI-40500-77100-Spring-2021/project-6/actions)
+# [![YourActionName Actions Status](https://github.com/CSCI-40500-77100-Spring-2021/project-6/workflows/Django-CI/badge.svg)](https://github.com/CSCI-40500-77100-Spring-2021/project-6/actions)
 
 # Maven
 
