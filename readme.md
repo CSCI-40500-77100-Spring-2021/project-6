@@ -42,7 +42,7 @@ Contains all the users in the database. An example of sending a new user to the 
 ```javascript
 let data = {
   username: "deondre",
-  password: "pogreopkerg"
+  password: <placeholder>
 }
 
 $.ajax({
